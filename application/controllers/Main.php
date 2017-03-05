@@ -138,6 +138,25 @@ class Main extends CI_Controller
 		}
 	}
 	
+	public function Learn_more_maintenance()
+	{
+		if(isset($_SESSION['logged_in'])==TRUE)
+		{
+		$this->load->model("Learn_more_model");
+	    $result = $this->Learn_more_model->get_Info();
+	    $result_Data=$result['Data'];
+	    foreach ($result_Data->result() as $row)
+	    {
+	     	$data[$row->type]=$row->text;
+	    }
+		$this->load->view("Admin/Learn_more_view",$data);
+
+		}
+		else
+		{
+		header("location:Log_In");
+		}
+	}
 
 }
 ?>

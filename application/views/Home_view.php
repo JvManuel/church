@@ -1,10 +1,7 @@
 <html>
 <body>
-	<div class="parallax-container" style="height: 500px !important;">
-      <div class="parallax">
-      	<img src="<?php echo base_url(); ?>resources/images/city2.jpg">
-      </div>
-    </div>
+	  
+    <?php $this->load->view("parallax_view"); ?>
 
     <div class="row" style="text-align:center;width:85%;">
     	<div class="col s12">

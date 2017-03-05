@@ -1,10 +1,8 @@
 <html>
 <body>
-	<div class="parallax-container">
-      <div class="parallax">
-      	<img src="<?php echo base_url(); ?>resources/images/city2.jpg">
-      </div>
-    </div>
+	
+	<?php $this->load->view("parallax_view"); ?>
+	
     <br>
 		<div id="events_view">
 					<center>
