@@ -1,0 +1,14 @@
+.parallax-container {
+      height: 300px !important;
+      width: 100%;
+}
+body{
+	background-color: #eeeeee;
+}
+.LoginForm{
+	padding:20 20 20 20;
+	text-align: left;
+	width:50%;
+	
+}
+
