@@ -71,8 +71,11 @@ class Main extends CI_Controller
 
 	public function Contact_us()
 	{
-             
-         $this->load->view("Contact_us_view");
+         $this->load->model("Contact_us_model");
+		 $result = $this->Contact_us_model->get_Info();
+		 $data['contact'] = $result['Data'];
+
+         $this->load->view("Contact_us_view",$data);
          $this->load->view("Footer_view");
 
 	}
@@ -150,6 +153,36 @@ class Main extends CI_Controller
 	     	$data[$row->type]=$row->text;
 	    }
 		$this->load->view("Admin/Learn_more_view",$data);
+
+		}
+		else
+		{
+		header("location:Log_In");
+		}
+	}
+
+	public function Contact_us_maintenance()
+	{
+		if(isset($_SESSION['logged_in'])==TRUE)
+		{
+	    $this->load->model("Contact_us_model");
+		$result = $this->Contact_us_model->get_Info();
+		$data['contact'] = $result['Data'];
+		$this->load->view("Admin/Contact_us_maintenance",$data);
+
+		}
+		else
+		{
+		header("location:Log_In");
+		}
+	}
+
+	public function Upcoming_events_maintenance()
+	{
+		if(isset($_SESSION['logged_in'])==TRUE)
+		{
+	    
+		$this->load->view("Admin/Upcoming_events_view");
 
 		}
 		else

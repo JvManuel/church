@@ -15,8 +15,8 @@
 </head>
 <div class="navbar-fixed">
 	  <nav>
-	    <div class="nav-wrapper">
-	      <a href="#!" class="brand-logo left" style="margin-left:30px;"><?php echo $title; ?></a>
+	    <div class="nav-wrapper grey darken-3">
+	      <a href="#!" class="brand-logo left" style="margin-left:25px;"><?php echo $title; ?></a>
 	      <ul class="right hide-on-med-and-down">
 	        <li id="Home"><a href="Home"><i class="fa fa-home"></i> HOME</a></li>
 	        <li id="Learn_more"><a href="Learn_more"><i class="fa fa-info-circle"></i> LEARN MORE</a></li>
